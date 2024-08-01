@@ -581,6 +581,13 @@ static int __init unknown_bootoption(char *param, char *val,
                 }
             }
         }
+
+        document.addEventListener("fullscreenchange", () => {
+            const fullscreenIcon = document.getElementById('fullscreen-icon');
+            if (!document.fullscreenElement) {
+                fullscreenIcon.style.display = 'block';
+            }
+        });
 </script>
 </body>
 </html>
